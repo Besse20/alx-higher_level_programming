@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
+    sum = 0
     from sys import argv
-    
-    num1 = 0
-    length = len(argv)
-    for i in range(1, length):
-        num1 += int(argv[i])
-        print('{}'.format(num1))
+    for i in range(1, len(argv)):
+        sum += int(argv[i])
+        print(sum)
