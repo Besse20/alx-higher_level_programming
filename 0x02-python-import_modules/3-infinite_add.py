@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from sys import argv
-    n = 1
-    num = 0
-    while n != len(argv):
-        a = argv[n]
-        num += int(a)
-        n += 1
-        print("{:d}".format(num))
+    import sys
+    argv = sys.argv[1:]
+    argv_count = len(argv)
+    index = 1
+    res = 0
+    while index <= argv_count:
+        res += int(sys.argv[index])
+        index += 1
+        print("{:d}".format(res))
