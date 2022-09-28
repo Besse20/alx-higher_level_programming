@@ -15,6 +15,7 @@ class Student:
             Student instance if attrs is a list of stirngs, only
             only attribute name contained in the list must be retrieved
             else all attributes must be retrieved"""
-            if type(attrs) == list and all(type(elem) == str for elem in attrs):
+            if type(attrs) == list and
+            all(type(elem) == str for elem in attrs):
                 return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
             return self.__dict__

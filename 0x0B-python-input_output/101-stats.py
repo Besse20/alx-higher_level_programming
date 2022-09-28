@@ -14,8 +14,6 @@ def print_stats():
     for k, v in sorted(codes.items()):
         if v is not 0:
             print("{}: {}".format(k, v))
-
-
             try:
                 for line in sys.stdin:
                     line = line.split()
@@ -28,7 +26,7 @@ def print_stats():
                                 total_size += int(line[-1])
                                 if tmp == iteration:
                                     iteration += 1
-                            except:
+                            except TypeError:
                                 if tmp == iteration:
                                     continue
 
